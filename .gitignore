@@ -3,6 +3,11 @@ node_modules
 /.env
 
 /.cache
+/.vercel
+/.output
+
 /build
 /public/build
+/api/_build
+
 /app/styles/tailwind.css
