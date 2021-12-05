@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .markdown {
+        @apply text-base text-gray-300;
+    }
+
+    .markdown > :first-child {
+        @apply mt-0;
+    }
+
+    .markdown h1 {
+        @apply text-6xl text-gray-100 font-extrabold mb-4 leading-none;
+    }
+
+    .markdown h3 {
+        @apply text-sm text-gray-500 font-bold uppercase;
+        @apply mt-6 leading-5;
+    }
+    
+    .markdown p {
+        @apply my-5;
+    }
+    
+    .markdown a {
+        @apply text-indigo-500 hover:text-indigo-400;
+    }
+
+    .markdown h3 + * {
+        @apply mt-0;
+    }
+}

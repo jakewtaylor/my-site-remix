@@ -1,0 +1,93 @@
+---
+meta:
+  title: Jake Taylor — Veterinary Wound Library
+  description: My write up on my work with the Veterinary Wound Library.
+---
+
+import { Figure } from '~/components/Figure';
+
+import indexImg from '~/images/portfolio/vwl-index.png';
+import repliesImage from '~/images/portfolio/vwl-replies.png';
+import iosImage from '~/images/portfolio/vwl-ios.png';
+
+<div className="markdown">
+# Veterinary Wound Library
+
+### Overview
+
+The [Veterinary Wound Library (VWL)](https://www.vetwoundlibrary.com)
+is a membership based resource that is dedicated to helping Vets, Techs,
+and Nurses better manage their patients wounds. They offer several services,
+including online training, case support, and a growing library of educational content.
+
+I worked with VWL to improve their case support service. Their existing
+solution was a very manual process that required customers and specialists
+to email back and forth, and depended on several third party integrations.
+
+VWL gave me a great spec explaining what they needed, but I was left
+in charge of many design decisions. They were very welcoming of my
+ideas, and I think the end product speaks volumes to the
+collaborative/iterative approach.
+
+I integrated a unified case support system into their existing Laravel
+site. The case support area is for both customers and specialists to
+manage their opened/assigned cases.
+
+<Figure
+  src={indexImg}
+  alt="Screenshot of VWL Case support dashboard."
+  caption="Any data in screenshots is faked as the real system contains sensitive information."
+/>
+
+I helped come up with a system that would allow any user to easily
+find the case they're interested in, and quickly post questions, and
+see historic correspondence.
+
+<Figure
+  src={repliesImage}
+  alt="Screenshot of an individual case within VWL."
+  caption="Any data in screenshots is faked as the real system contains sensitive information."
+/>
+
+As well as the web app, I also built a corresponding React Native
+application for both iOS and Android. It provides the same
+functionality as the website, but allows users to correspond on cases
+when they're on the move.
+
+<Figure
+  src={iosImage}
+  alt="Screenshot of the VWL iOS app."
+  caption="Any data in screenshots is faked as the real system contains sensitive information."
+/>
+
+### Tech Details
+
+All of this work was done with Laravel &amp; React. The mobile app was
+built with React Native, so a lot of the Typescript code was shared
+between the projects.
+
+VWL were already using Laravel for their existing site, so the backend
+for the case support system was built into that. I liaised with their
+in-house dev, and we decided that we should also rebuild their
+existing static "member area" with a React version, for easier
+integration with other tools they plan to build in the future.
+
+State management for the case support system was done using Redux,
+which made sense for this system as there was a lot of relational data
+to render out, and lots of navigating around&mdash;having stuff cached
+makes the experience much snappier. Using Redux made it easy to
+implement live updates, so whenever any changes are made to the
+backend, the frontend reflects that nearly immediately, without the
+need to reload the page. This works in the app, too!
+
+All the case responses go through Laravels event/notification systems,
+so we enabled push notifications and/or email alerts for certain
+events.
+
+### Conclusion
+
+This was a really interesting project to work on, and it was a lot of
+fun coming up with ideas and designs to get it completed. I'd happily
+work with VWL again, and believe they'd say the same about me!
+
+</div>
