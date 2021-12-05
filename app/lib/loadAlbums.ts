@@ -15,7 +15,9 @@ export type AlbumsResponse = {
 };
 
 export const loadAlbums = async (page = 1): Promise<AlbumsResponse> => {
-  const request = await fetch(`https://jaketaylor.co/api/albums?page=${page}`);
+  const request = await fetch(
+    `http://api.jaketaylor.co/api/albums?page=${page}`,
+  );
   const res: AlbumsResponse = await request.json();
 
   return res;
