@@ -1,4 +1,12 @@
-import React from 'react';
+import { MetaFunction } from 'remix';
+
+export let meta: MetaFunction = () => {
+  return {
+    title: 'Jake Taylor — Contact',
+    description:
+      "Freelance web/app developer available for hire. Get in touch and let's build something together!",
+  };
+};
 
 export default function Contact() {
   return (
