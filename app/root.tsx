@@ -104,7 +104,7 @@ function Document({
           async
           defer
           data-website-id="f25284cc-bca6-4363-ac55-20107ce03594"
-          src="http://umami.jaketaylor.co/umami.js"
+          src="https://umami.jaketaylor.co/umami.js"
         ></script>
       </head>
 
