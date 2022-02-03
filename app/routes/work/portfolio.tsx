@@ -19,7 +19,7 @@ export default function Portfolio() {
           location.pathname === '/work/portfolio'
             ? 'text-6xl'
             : 'text-xl text-opacity-75'
-        } font-black text-gray-100`}
+        } font-black text-gray-100 transition-all`}
       >
         Portfolio
       </h1>

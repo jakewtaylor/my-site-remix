@@ -7,6 +7,10 @@
         @apply text-base text-gray-300;
     }
 
+    .markdown.blog {
+        @apply max-w-prose w-11/12 mx-auto py-8;
+    }
+
     .markdown > :first-child {
         @apply mt-0;
     }
@@ -31,4 +35,24 @@
     .markdown h3 + * {
         @apply mt-0;
     }
+}
+
+.footnotes {
+    @apply max-w-prose w-11/12 mx-auto text-base;
+}
+
+.footnotes hr {
+    @apply border-t-gray-500;
+}
+
+.footnotes ol {
+    @apply list-decimal mt-4 ml-6;
+}
+
+.footnotes ol li {
+    @apply text-gray-300 pl-4;
+}
+
+.footnotes ol li a {
+    @apply text-indigo-500 hover:text-indigo-400;
 }

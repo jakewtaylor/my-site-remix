@@ -1,13 +1,11 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-  mode: 'jit',
-  purge: ['./app/**/*.{ts,tsx,mdx}'],
-  darkMode: false, // or 'media' or 'class'
+  content: ['./app/**/*.{ts,tsx,mdx}'],
   theme: {
     extend: {
       colors: {
-        trueGray: colors.trueGray,
+        trueGray: colors.neutral,
       },
 
       minWidth: (theme) => ({
@@ -52,9 +50,7 @@ module.exports = {
       },
     },
   },
-  variants: {
-    extend: {},
-  },
+
   plugins: [
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
