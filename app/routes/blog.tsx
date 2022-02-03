@@ -13,6 +13,12 @@ export default function Blog() {
             isIndex ? 'pt-36 pb-12' : 'py-4'
           } relative z-30`}
         >
+          {isIndex ? (
+            <Link to="/" className="text-sm text-gray-100 mb-1">
+              ← Back to main site
+            </Link>
+          ) : null}
+
           <Link to="/blog">
             <h1
               className={`text-gray-100 transition ${

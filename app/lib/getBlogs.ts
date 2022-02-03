@@ -1,8 +1,4 @@
-import path from 'path';
-import fs from 'fs/promises';
-import parseFrontMatter from 'front-matter';
-import invariant from 'tiny-invariant';
-import { formatISO } from 'date-fns';
+import * as firstPost from '../routes/blog/first-post.mdx';
 
 export type Post = {
   slug: string;
@@ -18,43 +14,31 @@ export type FrontMatter = {
   title: string;
   excerpt: string;
   tags: string;
-  draft: boolean;
+  draft?: boolean;
+  created: string;
+  updated: string;
 };
 
-function isValidFrontMatter(attributes: any): attributes is FrontMatter {
-  return attributes?.title;
-}
-
-const frontmatterToPost = async (fileName: string): Promise<Post> => {
-  const filePath = path.join(blogsPath, fileName);
-  const file = await fs.readFile(filePath);
-  const stats = await fs.stat(filePath);
-  const { attributes } = parseFrontMatter(file.toString());
-
-  invariant(isValidFrontMatter(attributes), `${fileName} has bad meta data!`);
-
+const postFromModule = ({
+  filename,
+  attributes,
+}: {
+  filename: string;
+  attributes: FrontMatter;
+}): Post => {
   return {
-    slug: fileName.replace(/\.mdx?$/, ''),
+    slug: filename.replace(/\.mdx?$/, ''),
     title: attributes.title,
     excerpt: attributes.excerpt,
-    created: formatISO(stats.birthtime),
-    updated: formatISO(stats.mtime),
+    created: attributes.created,
+    updated: attributes.updated,
     tags: attributes.tags?.split(',').map((tag) => tag.trim()) ?? [],
     draft: attributes.draft ?? false,
   };
 };
 
-// relative to the server output not the source!
-const blogsPath = path.join(__dirname, '..', '..', 'app', 'routes', 'blog');
-
 export async function getBlogs(): Promise<Post[]> {
-  const dir = await fs.readdir(blogsPath);
-
-  const posts = await Promise.all(
-    dir
-      .filter((filename) => filename.endsWith('.mdx'))
-      .map(async (filename) => frontmatterToPost(filename)),
-  );
+  const posts = [firstPost].map((post) => postFromModule(post));
 
   return posts.filter((blog) => !blog.draft);
 }

@@ -5,10 +5,14 @@ tags: general
 meta:
   title: So, I've built a blog... — Jake Taylor's Blog
   description: I've built the blog and it's ready to go, now what?
+created: 2022-02-03T15:41:23Z
+updated: 2022-02-03T20:37:37Z
 ---
 
+import { Timestamp } from '~/components/blogs/Timestamp';
+
 <div className="markdown blog">
-Thursday 3rd February 2022
+<Timestamp date={attributes.created} />
 
 # {attributes.title}
 
