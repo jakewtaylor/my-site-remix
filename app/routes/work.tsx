@@ -19,7 +19,7 @@ export default function Work() {
     <>
       <Sidebar track={track} />
 
-      <div className="md:ml-64 bg-gray-900 min-h-screen">
+      <div className="md:ml-64 bg-gray-900 min-h-screen pb-20">
         <main className="max-w-4xl w-11/12 mx-auto pt-16 pb-4">
           <Outlet />
         </main>

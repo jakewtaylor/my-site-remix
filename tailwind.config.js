@@ -8,6 +8,10 @@ module.exports = {
         trueGray: colors.neutral,
       },
 
+      borderWidth: {
+        12: '12px',
+      },
+
       minWidth: (theme) => ({
         64: theme('spacing.64'),
       }),
