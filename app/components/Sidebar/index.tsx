@@ -86,7 +86,7 @@ export const Sidebar: React.FC<Props> = ({ track }) => {
           {track ? (
             <li className="md:hidden absolute right-0 top-1/2 transform -translate-y-1/2">
               <button
-                className="block bg-indigo-500 bg-opacity-20 hover:bg-opacity-30 text-indigo-500 rounded-full p-2"
+                className="block bg-indigo-500 bg-opacity-20 hover:bg-opacity-30 transition-colors text-indigo-500 rounded-full p-2"
                 onClick={() => setTrackOpen((p) => !p)}
               >
                 <MusicIcon className="block h-5 w-5 opacity-75 -mr-[2px] -mb-[2px] motion-safe:animate-pulse" />
