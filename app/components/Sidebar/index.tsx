@@ -15,6 +15,8 @@ export const Sidebar: React.FC<Props> = ({ track }) => {
   const location = useLocation();
   const [trackOpen, setTrackOpen] = useState(false);
 
+  const pathIs = (path: string) => location.pathname.startsWith(path);
+
   return (
     <aside className="fixed right-0 left-0 bottom-0 md:bottom-auto md:right-auto md:h-screen w-full md:w-64 bg-gray-800 py-2 md:py-0 z-50">
       {/* Logo */}
@@ -50,7 +52,7 @@ export const Sidebar: React.FC<Props> = ({ track }) => {
               to="/work/portfolio"
               className={(active) =>
                 `px-4 py-3 flex flex-col md:flex-row justify-center md:justify-start items-center rounded-lg hover:bg-gray-100 hover:bg-opacity-25 ${
-                  active && location.pathname.startsWith('/work/portfolio')
+                  active && pathIs('/work/portfolio')
                     ? 'bg-indigo-500 bg-opacity-20 text-indigo-500'
                     : ''
                 }`
@@ -68,7 +70,7 @@ export const Sidebar: React.FC<Props> = ({ track }) => {
               to="/work/contact"
               className={(active) =>
                 `px-4 py-3 flex flex-col md:flex-row justify-center md:justify-start items-center rounded-lg hover:bg-gray-100 hover:bg-opacity-25 ${
-                  active && location.pathname.startsWith('/work/contact')
+                  active && pathIs('/work/contact')
                     ? 'bg-indigo-500 bg-opacity-20 text-indigo-500'
                     : ''
                 }`
@@ -84,7 +86,7 @@ export const Sidebar: React.FC<Props> = ({ track }) => {
           {track ? (
             <li className="md:hidden absolute right-0 top-1/2 transform -translate-y-1/2">
               <button
-                className="block bg-indigo-500 bg-opacity-20 text-indigo-500 rounded-full p-2"
+                className="block bg-indigo-500 bg-opacity-20 hover:bg-opacity-30 text-indigo-500 rounded-full p-2"
                 onClick={() => setTrackOpen((p) => !p)}
               >
                 <MusicIcon className="block h-5 w-5 opacity-75 -mr-[2px] -mb-[2px] motion-safe:animate-pulse" />
