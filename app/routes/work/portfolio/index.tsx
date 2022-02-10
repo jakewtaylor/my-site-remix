@@ -37,7 +37,7 @@ export default function Portfolio() {
 
         <Link
           to="/work/contact"
-          className="bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 rounded-lg overflow-hidden p-8 transition-transform md:transform md:hover:scale-105"
+          className="block p-8 bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 rounded-lg overflow-hidden transition-transform md:transform md:hover:scale-105"
         >
           <h6 className="text-gray-800 font-bold text-2xl leading-6">
             Maybe your site should be here?
