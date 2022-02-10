@@ -37,14 +37,17 @@ export default function Portfolio() {
 
         <Link
           to="/work/contact"
-          className="bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 rounded-lg overflow-hidden p-8 transition-transform md:transform md:hover:scale-105"
+          className="bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 rounded-lg overflow-hidden transition-transform md:transform md:hover:scale-105"
         >
-          <h6 className="text-gray-800 font-bold text-2xl leading-6">
-            Maybe your site should be here?
-          </h6>
-          <p className="leading-4 text-gray-700 mt-4">
-            Get in touch, let's build something together.
-          </p>
+          {/* Using a margin on the inside as it makes the tap on mobile nicer */}
+          <div className="m-8">
+            <h6 className="text-gray-800 font-bold text-2xl leading-6">
+              Maybe your site should be here?
+            </h6>
+            <p className="leading-4 text-gray-700 mt-4">
+              Get in touch, let's build something together.
+            </p>
+          </div>
         </Link>
       </div>
     </>
