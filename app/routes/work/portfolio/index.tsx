@@ -1,6 +1,7 @@
 import { Link } from 'remix';
 
 import vwlCoverPhoto from '~/images/portfolio/vwl-cover.png';
+import purismCoverPhoto from '~/images/portfolio/purism-cover.png';
 
 export default function Portfolio() {
   return (
@@ -20,6 +21,17 @@ export default function Portfolio() {
             <h6 className="text-gray-200 font-bold text-xl">
               Veterinary Wound Library
             </h6>
+          </div>
+        </Link>
+
+        <Link
+          to="/work/portfolio/purism"
+          className="bg-gradient-to-br from-indigo-600 via-indigo-500 to-indigo-400 rounded-lg overflow-hidden transition-transform md:transform md:hover:scale-105"
+        >
+          <img src={purismCoverPhoto} />
+
+          <div className="px-4 pb-2">
+            <h6 className="text-gray-200 font-bold text-xl">Purism</h6>
           </div>
         </Link>
 

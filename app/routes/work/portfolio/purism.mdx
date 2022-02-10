@@ -1,0 +1,61 @@
+---
+meta:
+  title: Jake Taylor — Purism
+  description: My work on wearepurism.com
+---
+
+import { Figure } from '~/components/Figure';
+
+import overlapImg from '~/images/portfolio/purism-overlap.png';
+import shopImg from '~/images/portfolio/purism-shop.png';
+
+<div className="markdown">
+# Purism
+
+### Overview
+
+[Purism](https://wearepurism.com/) is an online clothes store that is built on
+the belief that online shopping shouldn't be a mystery.
+
+I worked with Purism to help build their website. This was a fresh project, and
+I was enlisted for frontend development. I was given Adobe XD mockups and
+started to convert them into real webpages, using Next JS.
+
+The designs for this site were great, and created some interesting challenges
+for me on the frontend, with some weird layouts of overlapping images in places.
+
+<Figure
+  src={overlapImg}
+  alt="Screenshot of purism home page."
+  caption="An example of an overlapping image layout."
+/>
+
+As well as simply converting mockups into HTML, there was some more complex work
+involved, namely implementing infinite scroll for the shop pages (which also
+follow a loose structure).
+
+<Figure
+  src={shopImg}
+  alt="Screenshot of purism shop page."
+  caption="The infinite loading shop page."
+/>
+
+The content for the site comes from a custom CMS, built by other developers on
+the Purism team who I worked with. There was also some integration with
+firebase.
+
+### Tech Details
+
+This site was built with [React](https://reactjs.org), using
+[NextJS](https://nextjs.org). Styling was done with
+[Tailwind](https://tailwindcss.com). These tools all work great together,
+allowing me to work quickly and iterate rapidly.
+
+Backend stuff was done via a custom CMS, and Firebase services.
+
+### Conclusion
+
+This was a fun project to work on, with a few interesting challenges we had to
+work to solve.
+
+</div>
