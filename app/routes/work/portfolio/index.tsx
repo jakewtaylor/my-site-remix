@@ -13,11 +13,13 @@ export default function Portfolio() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
         <Link
           to="/work/portfolio/vwl"
-          className="bg-gradient-to-br from-indigo-400 via-indigo-500 to-indigo-600 rounded-lg overflow-hidden transition-transform md:transform md:hover:scale-105"
+          className="bg-gradient-to-br from-indigo-400 via-indigo-500 to-indigo-600 rounded-lg overflow-hidden transition-transform md:transform md:hover:scale-105 flex flex-col"
         >
-          <img src={vwlCoverPhoto} />
+          <div className="flex-grow flex items-center justify-center">
+            <img src={vwlCoverPhoto} />
+          </div>
 
-          <div className="px-4 pb-2">
+          <div className="px-4 pb-2 mt-auto">
             <h6 className="text-gray-200 font-bold text-xl">
               Veterinary Wound Library
             </h6>
@@ -26,11 +28,13 @@ export default function Portfolio() {
 
         <Link
           to="/work/portfolio/purism"
-          className="bg-gradient-to-br from-indigo-600 via-indigo-500 to-indigo-400 rounded-lg overflow-hidden transition-transform md:transform md:hover:scale-105"
+          className="bg-gradient-to-br from-indigo-600 via-indigo-500 to-indigo-400 rounded-lg overflow-hidden transition-transform md:transform md:hover:scale-105 flex flex-col"
         >
-          <img src={purismCoverPhoto} />
+          <div className="flex-grow flex items-center justify-center">
+            <img src={purismCoverPhoto} className="w-11/12" />
+          </div>
 
-          <div className="px-4 pb-2">
+          <div className="px-4 pb-2 mt-auto">
             <h6 className="text-gray-200 font-bold text-xl">Purism</h6>
           </div>
         </Link>
