@@ -17,7 +17,8 @@ export let meta: MetaFunction = () => {
 
 export const loader: LoaderFunction = async (): Promise<LoaderData> => {
   const dayInSeconds = 60 * 60 * 24;
-  const albums = await cache('albums', dayInSeconds, loadAllAlbums);
+  // const albums = await cache('albums', dayInSeconds, loadAllAlbums);
+  const albums = await loadAllAlbums();
 
   return { albums };
 };
@@ -29,7 +30,7 @@ export default function Music() {
     <>
       <MusicIntro />
 
-      <div className="grid grid-cols-4 gap-4 gap-y-6 mt-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 gap-y-6 mt-4">
         {albums.map((album) => (
           <a key={album.link} href={album.link} target="_blank">
             <div className="mb-2 w-full aspect-w-1 aspect-h-1">

@@ -19,11 +19,13 @@ export default function Music() {
     <div className="bg-gray-900 min-h-screen">
       <div className="relative bg-gradient-to-br from-indigo-400 via-indigo-500 to-indigo-600">
         <div className="max-w-6xl w-11/12 mx-auto pt-36 pb-12 relative z-30">
-          <div className="flex flex-row justify-between items-center">
-            <h1 className="text-gray-100 text-6xl font-black">Music</h1>
+          <div className="flex flex-col-reverse md:flex-row justify-between items-start md:items-center">
+            <h1 className="text-gray-100 text-6xl font-black mt-4 md:mt-0">
+              Music
+            </h1>
 
             {track ? (
-              <div className="bg-gray-900 bg-opacity-25 flex flex-row items-center justify-end min-w-64">
+              <div className="bg-gray-900 bg-opacity-25 flex flex-row items-center justify-end min-w-64 self-end md:self-auto">
                 <div className="p-2">
                   <p className="block text-xs font-semibold text-gray-300 text-opacity-75 uppercase text-right">
                     Listening Now
