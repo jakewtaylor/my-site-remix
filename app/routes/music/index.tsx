@@ -17,8 +17,7 @@ export let meta: MetaFunction = () => {
 
 export const loader: LoaderFunction = async (): Promise<LoaderData> => {
   const dayInSeconds = 60 * 60 * 24;
-  // const albums = await cache('albums', dayInSeconds, loadAllAlbums);
-  const albums = await loadAllAlbums();
+  const albums = await cache('albums', dayInSeconds, loadAllAlbums);
 
   return { albums };
 };
