@@ -73,7 +73,7 @@ export default function Index() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
         <Link
           to="/work/portfolio"
-          className="bg-gradient-to-br from-purple-400 via-purple-500 to-purple-600 rounded-lg overflow-hidden p-4 transition-transform md:transform md:hover:-translate-y-2 md:hover:-rotate-2 md:hover:scale-110"
+          className="bg-gradient-to-br from-purple-400 via-purple-500 to-purple-600 rounded-lg overflow-hidden p-4 transition-transform md:transform md:hover:-translate-y-1 md:hover:-rotate-1 md:hover:scale-105"
         >
           <p className="text-gray-200 font-bold text-3xl leading-none">
             Portfolio
@@ -83,7 +83,7 @@ export default function Index() {
 
         <a
           href="https://github.com/jakewtaylor"
-          className="bg-gradient-to-br from-gray-500 via-gray-600 to-gray-700 rounded-lg overflow-hidden p-4 transition-transform md:transform md:hover:-translate-y-2 md:hover:-rotate-2 md:hover:scale-110"
+          className="bg-gradient-to-br from-gray-500 via-gray-600 to-gray-700 rounded-lg overflow-hidden p-4 transition-transform md:transform md:hover:-translate-y-1 md:hover:-rotate-1 md:hover:scale-105"
         >
           <p className="text-gray-200 font-bold text-3xl leading-none">
             Github
@@ -95,7 +95,7 @@ export default function Index() {
 
         <a
           href="https://www.linkedin.com/in/jakewtaylor/"
-          className="bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 rounded-lg overflow-hidden p-4 transition-transform md:transform md:hover:-translate-y-2 md:hover:-rotate-2 md:hover:scale-110"
+          className="bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 rounded-lg overflow-hidden p-4 transition-transform md:transform md:hover:-translate-y-1 md:hover:-rotate-1 md:hover:scale-105"
         >
           <p className="text-gray-200 font-bold text-3xl leading-none">
             LinkedIn
