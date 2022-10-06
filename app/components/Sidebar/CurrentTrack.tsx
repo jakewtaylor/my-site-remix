@@ -22,7 +22,7 @@ export const CurrentTrack: React.FC<Props> = ({ track, open }) => {
         className="group block w-full bg-gray-700 hover:bg-gray-600 transition-colors p-2 text-right md:text-left"
         to="/music"
       >
-        <p className="whitespace-nowrap truncate text-xs font-semibold text-gray-300 text-opacity-50 mb-2 uppercase tracking-wider">
+        <p className="whitespace-nowrap truncate text-xs font-semibold text-gray-300 text-opacity-80 mb-2 uppercase tracking-wider">
           Listening Now
         </p>
 
