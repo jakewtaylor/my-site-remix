@@ -17,7 +17,7 @@ export default function Music() {
 
   return (
     <div className="bg-gray-900 min-h-screen">
-      <div className="relative bg-gradient-to-br from-indigo-400 via-indigo-500 to-indigo-600">
+      <div className="relative bg-gradient-to-br from-indigo-200 via-indigo-300 to-indigo-600">
         <div className="max-w-6xl w-11/12 mx-auto pt-36 pb-12 relative z-30">
           <div className="flex flex-col-reverse md:flex-row justify-between items-start md:items-center">
             <h1 className="text-gray-100 text-6xl font-black mt-4 md:mt-0">

@@ -35,7 +35,7 @@ export default function Index() {
         functional that looks and feels great.{' '}
         <Link
           to="/work/contact"
-          className="text-indigo-500 hover:text-indigo-300"
+          className="text-indigo-300 hover:text-indigo-200"
         >
           Get in touch and let's work together!
         </Link>
@@ -45,14 +45,14 @@ export default function Index() {
         If you want to see my full experience, please check my{' '}
         <a
           href="https://www.linkedin.com/in/jakewtaylor/"
-          className="text-indigo-500 hover:text-indigo-300"
+          className="text-indigo-300 hover:text-indigo-200"
         >
           LinkedIn
         </a>
         . If you want to see some code, check my{' '}
         <a
           href="https://github.com/jakewtaylor"
-          className="text-indigo-500 hover:text-indigo-300"
+          className="text-indigo-300 hover:text-indigo-200"
         >
           GitHub
         </a>
@@ -63,7 +63,7 @@ export default function Index() {
         If you want to see and read about some of my work, check out my{' '}
         <Link
           to="/work/portfolio"
-          className="text-indigo-500 hover:text-indigo-300"
+          className="text-indigo-300 hover:text-indigo-200"
         >
           portfolio page
         </Link>

@@ -26,7 +26,7 @@ export default function Contact() {
           by emailing me on{' '}
           <a
             href="mailto:me@jaketaylor.co"
-            className="text-indigo-500 hover:text-indigo-300"
+            className="text-indigo-300 hover:text-indigo-200"
           >
             me@jaketaylor.co
           </a>
@@ -35,7 +35,7 @@ export default function Contact() {
           or by messaging me on{' '}
           <a
             href="https://www.linkedin.com/in/jakewtaylor/"
-            className="text-indigo-500 hover:text-indigo-300"
+            className="text-indigo-300 hover:text-indigo-200"
           >
             LinkedIn
           </a>

@@ -13,7 +13,7 @@ export default function Portfolio() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
         <Link
           to="/work/portfolio/vwl"
-          className="bg-gradient-to-br from-indigo-400 via-indigo-500 to-indigo-600 rounded-lg overflow-hidden transition-transform md:transform md:hover:scale-105 flex flex-col"
+          className="bg-gradient-to-br from-indigo-200 via-indigo-300 to-indigo-600 rounded-lg overflow-hidden transition-transform md:transform md:hover:scale-105 flex flex-col"
         >
           <div className="flex-grow flex items-center justify-center">
             <img src={vwlCoverPhoto} />
@@ -28,7 +28,7 @@ export default function Portfolio() {
 
         <Link
           to="/work/portfolio/purism"
-          className="bg-gradient-to-br from-indigo-600 via-indigo-500 to-indigo-400 rounded-lg overflow-hidden transition-transform md:transform md:hover:scale-105 flex flex-col"
+          className="bg-gradient-to-br from-indigo-600 via-indigo-300 to-indigo-200 rounded-lg overflow-hidden transition-transform md:transform md:hover:scale-105 flex flex-col"
         >
           <div className="flex-grow flex items-center justify-center">
             <img src={purismCoverPhoto} className="w-11/12" />

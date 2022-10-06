@@ -7,7 +7,7 @@ export default function Blog() {
 
   return (
     <div className="bg-gray-900 min-h-screen">
-      <div className="relative bg-gradient-to-br from-indigo-400 via-indigo-500 to-indigo-600">
+      <div className="relative bg-gradient-to-br from-indigo-200 via-indigo-300 to-indigo-600">
         <div
           className={`max-w-prose w-11/12 mx-auto transition-all ${
             isIndex ? 'pt-36 pb-12' : 'py-4'
