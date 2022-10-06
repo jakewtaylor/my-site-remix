@@ -29,7 +29,7 @@
     }
     
     .markdown a {
-        @apply text-indigo-500 hover:text-indigo-400;
+        @apply text-indigo-300 hover:text-indigo-200;
     }
 
     .markdown h3 + * {
@@ -54,5 +54,5 @@
 }
 
 .footnotes ol li a {
-    @apply text-indigo-500 hover:text-indigo-400;
+    @apply text-indigo-300 hover:text-indigo-200;
 }

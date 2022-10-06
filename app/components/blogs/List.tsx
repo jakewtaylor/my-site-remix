@@ -30,7 +30,7 @@ export const BlogList: React.FC<Props> = ({ blogs }) => (
           <p className="text-lg mb-2">
             {blog.excerpt}
             <br />
-            <Link to={`/blog/${blog.slug}`} className="text-indigo-400">
+            <Link to={`/blog/${blog.slug}`} className="text-indigo-200">
               Read More
             </Link>
           </p>

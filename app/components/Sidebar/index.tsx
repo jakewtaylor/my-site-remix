@@ -35,7 +35,7 @@ export const Sidebar: React.FC<Props> = ({ track }) => {
               className={(active) =>
                 `px-4 py-3 flex flex-col md:flex-row justify-center md:justify-start items-center rounded-lg hover:bg-gray-100 hover:bg-opacity-25 ${
                   active && location.pathname === '/work'
-                    ? 'bg-indigo-500 bg-opacity-20 text-indigo-500'
+                    ? 'bg-indigo-300 bg-opacity-20 text-indigo-300'
                     : ''
                 }`
               }
@@ -53,7 +53,7 @@ export const Sidebar: React.FC<Props> = ({ track }) => {
               className={(active) =>
                 `px-4 py-3 flex flex-col md:flex-row justify-center md:justify-start items-center rounded-lg hover:bg-gray-100 hover:bg-opacity-25 ${
                   active && pathIs('/work/portfolio')
-                    ? 'bg-indigo-500 bg-opacity-20 text-indigo-500'
+                    ? 'bg-indigo-300 bg-opacity-20 text-indigo-300'
                     : ''
                 }`
               }
@@ -71,7 +71,7 @@ export const Sidebar: React.FC<Props> = ({ track }) => {
               className={(active) =>
                 `px-4 py-3 flex flex-col md:flex-row justify-center md:justify-start items-center rounded-lg hover:bg-gray-100 hover:bg-opacity-25 ${
                   active && pathIs('/work/contact')
-                    ? 'bg-indigo-500 bg-opacity-20 text-indigo-500'
+                    ? 'bg-indigo-300 bg-opacity-20 text-indigo-300'
                     : ''
                 }`
               }
@@ -87,7 +87,7 @@ export const Sidebar: React.FC<Props> = ({ track }) => {
             <li className="md:hidden absolute right-0 top-1/2 transform -translate-y-1/2">
               <button
                 aria-label="See currently playing track"
-                className="block bg-indigo-500 bg-opacity-20 hover:bg-opacity-30 transition-colors text-indigo-500 rounded-full p-2"
+                className="block bg-indigo-300 bg-opacity-20 hover:bg-opacity-30 transition-colors text-indigo-300 rounded-full p-2"
                 onClick={() => setTrackOpen((p) => !p)}
               >
                 <MusicIcon className="block h-5 w-5 opacity-75 -mr-[2px] -mb-[2px] motion-safe:animate-pulse" />
