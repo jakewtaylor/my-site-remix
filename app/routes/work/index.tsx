@@ -14,7 +14,7 @@ export let meta: MetaFunction = () => {
 export default function Index() {
   return (
     <>
-      <h5 className="text-xl text-gray-300">Hey, my name is</h5>
+      <p className="text-xl text-gray-300">Hey, my name is</p>
       <h1 className="text-6xl font-black text-gray-100">Jake Taylor</h1>
 
       <p className="text-xl text-gray-300 mt-6">
