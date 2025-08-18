@@ -1,4 +1,4 @@
-import * as firstPost from '../routes/blog/first-post.mdx';
+import * as firstPost from '../routes/blog.first-post.mdx';
 
 export type Post = {
   slug: string;

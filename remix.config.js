@@ -18,9 +18,9 @@ module.exports = {
     v2_headers: true,
   },
 
-  routes(defineRoutes) {
-    return createRoutesFromFolders(defineRoutes);
-  },
+  // routes(defineRoutes) {
+  //   return createRoutesFromFolders(defineRoutes);
+  // },
 };
 
 // const { remarkMdxFrontmatter } = require('remark-mdx-frontmatter');
