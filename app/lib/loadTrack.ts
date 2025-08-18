@@ -11,8 +11,14 @@ const hasTrack = (t: Track | Empty): t is Track =>
   t.hasOwnProperty('album_art');
 
 export const loadTrack = async (): Promise<Track | null> => {
-  const request = await fetch('http://api.jaketaylor.co/api/track');
-  const res: Track | Empty = await request.json();
+  try {
+    const request = await fetch('http://api.jaketaylor.co/api/track', {
+      signal: AbortSignal.timeout(2000),
+    });
+    const res: Track | Empty = await request.json();
 
-  return hasTrack(res) ? res : null;
+    return hasTrack(res) ? res : null;
+  } catch {
+    return null;
+  }
 };
