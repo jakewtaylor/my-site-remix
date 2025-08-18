@@ -1,4 +1,4 @@
-import { redirect } from 'remix';
+import { redirect } from '@remix-run/node';
 
 /**
  * I don't want any thing at the URL route, so redirect to /work as the default!

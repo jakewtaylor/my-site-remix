@@ -1,14 +1,18 @@
-import type { MetaFunction } from 'remix';
-import { Link } from 'remix';
+import { Link } from '@remix-run/react';
 
 // https://remix.run/api/conventions#meta
-export let meta: MetaFunction = () => {
-  return {
-    title: 'Jake Taylor — Freelance, full-stack, web/app developer',
-    description:
-      "Freelance web/app developer available for hire. Get in touch and let's build something together!",
-  };
-};
+export function meta() {
+  return [
+    {
+      title: 'Jake Taylor — Freelance, full-stack, web/app developer',
+    },
+    {
+      name: 'description',
+      content:
+        "Freelance web/app developer available for hire. Get in touch and let's build something together!",
+    },
+  ];
+}
 
 // https://remix.run/guides/routing#index-routes
 export default function Index() {

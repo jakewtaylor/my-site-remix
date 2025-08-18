@@ -1,5 +1,5 @@
 import { LoaderFunction } from '@remix-run/server-runtime';
-import { useLoaderData, Outlet } from 'remix';
+import { useLoaderData, Outlet } from '@remix-run/react';
 import { loadTrack, Track } from '~/lib/loadTrack';
 
 type LoaderData = {

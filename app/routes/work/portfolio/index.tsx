@@ -1,4 +1,4 @@
-import { Link } from 'remix';
+import { Link } from '@remix-run/react';
 
 import vwlCoverPhoto from '~/images/portfolio/vwl-cover.png';
 import purismCoverPhoto from '~/images/portfolio/purism-cover.png';

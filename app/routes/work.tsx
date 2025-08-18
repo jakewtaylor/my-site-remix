@@ -1,4 +1,5 @@
-import { useLoaderData, LoaderFunction, Outlet } from 'remix';
+import { LoaderFunction } from '@remix-run/node';
+import { useLoaderData, Outlet } from '@remix-run/react';
 import { Sidebar } from '~/components/Sidebar';
 import { loadTrack, Track } from '~/lib/loadTrack';
 

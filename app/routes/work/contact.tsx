@@ -1,12 +1,17 @@
-import { MetaFunction } from 'remix';
+import { MetaFunction } from '@remix-run/node';
 
-export let meta: MetaFunction = () => {
-  return {
-    title: 'Jake Taylor — Contact',
-    description:
-      "Freelance web/app developer available for hire. Get in touch and let's build something together!",
-  };
-};
+export function meta() {
+  return [
+    {
+      title: 'Jake Taylor — Contact',
+    },
+    {
+      name: 'description',
+      content:
+        "Freelance web/app developer available for hire. Get in touch and let's build something together!",
+    },
+  ];
+}
 
 export default function Contact() {
   return (

@@ -1,4 +1,4 @@
-import { Link, Outlet, useLocation } from 'remix';
+import { Link, Outlet, useLocation } from '@remix-run/react';
 
 export default function Blog() {
   const location = useLocation();

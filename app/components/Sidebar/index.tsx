@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { HomeIcon } from '../icons/Home';
 import { CollectionIcon } from '../icons/Collection';
 import { ChatIcon } from '../icons/Chat';
-import { Link, NavLink, useLocation } from 'remix';
+import { NavLink, useLocation } from '@remix-run/react';
 import { Track } from '~/lib/loadTrack';
 import { MusicIcon } from '../icons/Music';
 import { CurrentTrack } from './CurrentTrack';

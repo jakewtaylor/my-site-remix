@@ -1,17 +1,21 @@
-import { LoaderFunction, MetaFunction, useLoaderData } from 'remix';
+import { useLoaderData } from '@remix-run/react';
 import { getBlogs, Post } from '~/lib/getBlogs';
 import { BlogList } from '~/components/blogs/List';
+import { LoaderFunction, MetaFunction } from '@remix-run/node';
 
 type LoaderData = {
   blogs: Post[];
 };
 
-export const meta: MetaFunction = () => {
-  return {
-    title: 'Blog — Jake Taylor',
-    description: 'My thoughts on anything that comes to mind.',
-  };
-};
+export function meta() {
+  return [
+    { title: 'Blog — Jake Taylor' },
+    {
+      name: 'description',
+      content: 'My thoughts on anything that comes to mind.',
+    },
+  ];
+}
 
 export const loader: LoaderFunction = async (): Promise<LoaderData> => {
   const blogs = await getBlogs();

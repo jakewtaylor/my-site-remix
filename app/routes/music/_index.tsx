@@ -1,5 +1,5 @@
-import { LoaderFunction, MetaFunction } from '@remix-run/server-runtime';
-import { Link, useLoaderData } from 'remix';
+import { LoaderFunction, MetaFunction } from '@remix-run/node';
+import { useLoaderData } from '@remix-run/react';
 import MusicIntro from '~/components/music/intro.mdx';
 import { Album, loadAllAlbums } from '~/lib/loadAlbums';
 import { cache } from '~/lib/redis.server';
@@ -8,12 +8,17 @@ type LoaderData = {
   albums: Album[];
 };
 
-export let meta: MetaFunction = () => {
-  return {
-    title: 'Music — Jake Taylor',
-    description: 'My favourite albums.',
-  };
-};
+export function meta() {
+  return [
+    {
+      title: 'Music — Jake Taylor',
+    },
+    {
+      name: 'description',
+      content: 'My favourite albums.',
+    },
+  ];
+}
 
 export const loader: LoaderFunction = async (): Promise<LoaderData> => {
   const dayInSeconds = 60 * 60 * 24;
